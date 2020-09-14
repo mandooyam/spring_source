@@ -9,6 +9,8 @@
 </head>
 <body>
 <h1>index</h1>
-<c:out value="테스트" />
+<c:out value="테스트" /><br>
+<a href="home">home</a><br>
+<a href="home2">home2</a>
 </body>
 </html>
