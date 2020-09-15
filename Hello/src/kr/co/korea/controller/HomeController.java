@@ -12,14 +12,4 @@ public class HomeController {
 		return "index";
 	}
 	
-	@GetMapping("/t1")
-	public String test1() {
-		return "test1";
-	}
-	
-	@PostMapping("/t2")
-	public String test2() {
-		return "test2";
-	}
-	
 }
