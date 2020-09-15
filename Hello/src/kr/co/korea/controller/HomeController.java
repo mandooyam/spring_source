@@ -9,17 +9,17 @@ public class HomeController {
 
 	@GetMapping("/")
 	public String index() {
-		return "/WEB-INF/views/index.jsp";
+		return "index";
 	}
 	
 	@GetMapping("/t1")
 	public String test1() {
-		return "/WEB-INF/views/test1.jsp";
+		return "test1";
 	}
 	
 	@PostMapping("/t2")
 	public String test2() {
-		return "/WEB-INF/views/test2.jsp";
+		return "test2";
 	}
 	
 }
