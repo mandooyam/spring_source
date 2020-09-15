@@ -8,9 +8,9 @@
 </head>
 <body>
 <h1>index</h1>
-링크:<a href="test1.jsp">test1</a><br>
+링크:<a href="t1">test1</a><br>
 <hr>
-<form action="test2.jsp" method="post">
+<form action="t2" method="post">
 	<input type="submit" value="test2">
 </form>
 </body>
