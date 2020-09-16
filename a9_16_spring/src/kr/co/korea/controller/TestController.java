@@ -17,7 +17,7 @@ import org.springframework.web.context.request.WebRequest;
 public class TestController {
 
 	@RequestMapping(value = "/test1", method = RequestMethod.GET)
-	public String test1(HttpServletRequest request, HttpServletResponse response) {
+	public String test1(HttpServletRequest request, HttpServletResponse response) { //전통적인 방법
 		// request: 값을 받아오는...
 
 		String id = request.getParameter("id");
@@ -70,7 +70,7 @@ public class TestController {
 		return "result";
 	}
 
-	@GetMapping("/test5")
+	@GetMapping("/test5") 
 	public String test5(@RequestParam int id, @RequestParam int name, @RequestParam int[] hobby) {
 		System.out.println("id:" + id);
 		System.out.println("name:" + name);

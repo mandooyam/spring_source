@@ -6,7 +6,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
-@Controller
 public class SubController {
 	@RequestMapping(value = "/test3", method = RequestMethod.POST)
 	public String test3_post() {
