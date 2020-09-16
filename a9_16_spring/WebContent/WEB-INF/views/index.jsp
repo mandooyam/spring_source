@@ -10,7 +10,7 @@
 <h1>index</h1>
 <img src="images/1.png" alt="메이븐" /> 
 링크:<a href="test1">test1</a><br/>
-<a href="test1">test1</a><br/>
+<a href="/a9_16_spring/test1">test1</a><br/>
 <a href="test2">test2</a><br/>
 <a href="board">board/list</a><br/>
 <a href="board/write">board/write</a><br/>
