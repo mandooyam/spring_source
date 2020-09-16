@@ -23,6 +23,7 @@ public class TestController {
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String hobby[] = request.getParameterValues("hobby");
+		System.out.println("test1");
 		System.out.println(id);
 		System.out.println(name);
 		for (String str : hobby) {
@@ -32,12 +33,13 @@ public class TestController {
 		return "/test1";
 	}
 
-	@RequestMapping(value = "/test2", method = RequestMethod.POST)
+	@RequestMapping(value = "/test2", method = RequestMethod.GET)
 	public String test2(HttpServletRequest request, HttpServletResponse response) {
 
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String hobby[] = request.getParameterValues("hobby");
+		System.out.println("test2");
 		System.out.println(id);
 		System.out.println(name);
 		for (String str : hobby) {
@@ -52,6 +54,7 @@ public class TestController {
 		String id = request.getParameter("id");
 		String name = request.getParameter("name");
 		String hobby[] = request.getParameterValues("hobby");
+		System.out.println("test3");
 		System.out.println("id:" + id);
 		System.out.println("name:" + name);
 		for (String str : hobby) {
@@ -62,6 +65,7 @@ public class TestController {
 
 	@GetMapping("/test4/{id}/{name}/{hobby}")
 	public String test4(@PathVariable int id, @PathVariable int name, @PathVariable int hobby) {
+		System.out.println("test4");
 		System.out.println("id:" + id);
 		System.out.println("name:" + name);
 		System.out.println("hobby:" + hobby);
@@ -72,6 +76,7 @@ public class TestController {
 
 	@GetMapping("/test5") 
 	public String test5(@RequestParam int id, @RequestParam int name, @RequestParam int[] hobby) {
+		System.out.println("test5");
 		System.out.println("id:" + id);
 		System.out.println("name:" + name);
 		for (int str : hobby) {
@@ -83,6 +88,7 @@ public class TestController {
 	@GetMapping("/test6")
 	public String test6(@RequestParam(value = "id") int value1, @RequestParam(value = "name") int value2,
 			@RequestParam(value = "hobby") int[] value3) {
+		System.out.println("test6");
 		System.out.println("id:" + value1);
 		System.out.println("name:" + value2);
 		for (int str : value3) {
@@ -94,6 +100,7 @@ public class TestController {
 	@GetMapping("/test7")
 	public String test7(@RequestParam int id, @RequestParam(required = true) String name,
 			@RequestParam(defaultValue = "0") int hobby) {
+		System.out.println("test7");
 		System.out.println("id:" + id);
 		System.out.println("name:" + name);
 		System.out.println("hobby:" + hobby);
@@ -104,6 +111,7 @@ public class TestController {
 	public String test1(@RequestParam Map<String, String> map) {
 		String id = map.get("id");
 		String name = map.get("name");
+		System.out.println("test8");
 		System.out.printf("id :%s\n", id);
 		System.out.printf("name :%s\n", name);
 		return "result";
