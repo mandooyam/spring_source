@@ -29,6 +29,10 @@ public class TestController3 {
 
 	@GetMapping("test4")
 	public String test4(Model model) { // (2) model객체에 주입받아서 데이터 담기
+		
+		
+		
+		
 		model.addAttribute("data1", 444);
 		model.addAttribute("data2", 400);
 		return "test4";
