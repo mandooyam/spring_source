@@ -41,4 +41,7 @@ public class TestController3 {
 		mv.setViewName("test5");
 		return mv;
 	}
+	
+	//이름, 국어, 영어, 수학 받아와서
+	//리턴하는 것까지 숙제
 }
