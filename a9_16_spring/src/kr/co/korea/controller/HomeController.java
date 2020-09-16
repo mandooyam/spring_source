@@ -14,13 +14,13 @@ public class HomeController {
 		return "index";
 	}
 	
-	@RequestMapping(value="/board/write", method=RequestMethod.GET)
+	@RequestMapping(value="board/write", method=RequestMethod.GET)
 	public String write() {
-		return "/board/write";
+		return "board/write";
 	}
 	
-	@RequestMapping(value="/board", method=RequestMethod.GET)
+	@RequestMapping(value="board", method=RequestMethod.GET)
 	public String list() {
-		return "/board/list";
+		return "board/list";
 	}
 }
