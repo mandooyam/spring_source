@@ -8,5 +8,7 @@
 </head>
 <body>
 <h1>test4</h1>
+data1: ${requestScope.data1 }<br>
+data2: ${data2 }<br>
 </body>
 </html>

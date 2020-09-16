@@ -17,7 +17,9 @@ public class TestController2 {
 		System.out.println("수학: "+mat);
 		System.out.println("영어: "+eng);
 		int total = Integer.parseInt(kor)+Integer.parseInt(mat)+Integer.parseInt(eng);
+		int tot=Integer.valueOf(kor)+Integer.valueOf(mat)+Integer.valueOf(eng);
 		System.out.println("총점: "+total);
+		System.out.println("총점: "+tot);
 		return "result";
 	}
 }

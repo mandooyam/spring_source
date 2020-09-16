@@ -8,5 +8,7 @@
 </head>
 <body>
 <h1>test2</h1>
+data1: ${param.data1 }<br>
+data2: ${param.data2 }<br>
 </body>
 </html>

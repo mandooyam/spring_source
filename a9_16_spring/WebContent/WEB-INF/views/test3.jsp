@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>test1</h1>
-받아온것 없음
+<h1>test3</h1>
+data1: ${requestScope.data1 }<br>
+data2: ${data2 }<br>
 </body>
 </html>
