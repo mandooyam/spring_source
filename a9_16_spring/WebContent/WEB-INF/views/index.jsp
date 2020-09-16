@@ -30,5 +30,14 @@ hobby:<input type="checkbox" name="hobby" value="study">공부
 <a href="test7?id=222&name=lee&hobby=300">test7</a>
 <hr>
 <a href="test8?id=222&name=lee">test8</a>
+<hr>
+<form action="board/write" method="post">
+이름:<input type="text" name="name"><br>
+국어:<input type="text" name="kor"><br>
+수학:<input type="text" name="mat"><br>
+영어: <input type="text" name="eng"><br>
+<input type="submit" value="계산"><br>
+</form>
+
 </body>
 </html>
