@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>test3</h1>
+<h1>test1</h1>
 <h2>결과</h2>
-data1: ${dataBean1.id } <br>
-data2: ${dataBean1.name } <br>
+data1: ${dataBean.data1 } <br>
+data2: ${dataBean.data2 } <br>
 </body>
 </html>
