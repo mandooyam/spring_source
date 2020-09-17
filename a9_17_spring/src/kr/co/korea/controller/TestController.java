@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import kr.co.korea.beans.DataBean;
 import kr.co.korea.beans.dataBean1;
 
-@Controller
 public class TestController {
 	
 	@PostMapping("/test1")
