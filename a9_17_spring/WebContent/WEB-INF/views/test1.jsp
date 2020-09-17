@@ -8,8 +8,13 @@
 </head>
 <body>
 <h1>test1</h1>
-<h2>결과</h2>
-data1: ${dataBean.data1 } <br>
-data2: ${dataBean.data2 } <br>
+<form action="result" method="post">
+	이름:<input type="text" name="user_name" value="${userDataBean.user_name }"/><br/>
+	아이디:<input type="text" name="user_id" value="${userDataBean.user_id }"/><br/>
+	비번:<input type="password" name="user_pw" value="${userDataBean.user_pw }"/><br/>
+	우편번호:<input type="text" name="user_postcode" value="${userDataBean.user_postcode }"/><br/>
+	주소:<input type="text" name="user_address" value="${userDataBean.user_address }"/><br/>
+	<input type="submit" value="결과">
+</form>
 </body>
 </html>

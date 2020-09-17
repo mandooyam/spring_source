@@ -8,8 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>test3</h1>
-<form:form modelAttribute="testBean" action="result" >
+<h1>test4</h1>
+<form:form modelAttribute="bean4" action="result" >
 	이름:<form:input path="user_name"/><br/>
 	아이디:<form:input path="user_id"/><br/>
 	비밀번호:<form:password path="user_pw" showPassword="true"/><br/>
