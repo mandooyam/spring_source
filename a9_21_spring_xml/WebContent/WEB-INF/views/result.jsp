@@ -7,7 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>index</h1>
-링크:<a href="test1">test1</a><br/>
+<h1>result</h1>
 </body>
 </html>
