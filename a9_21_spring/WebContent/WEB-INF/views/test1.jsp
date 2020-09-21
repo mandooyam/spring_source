@@ -8,5 +8,11 @@
 </head>
 <body>
 <h1>test1</h1>
+<form action="result" method="get">
+아이디:<input type="text" name="id"><br>
+이름:<input type="text" name="name"><br>
+비번:<input type="password" name="pw"><br>
+<input type="submit" value="확인">
+</form>
 </body>
 </html>
