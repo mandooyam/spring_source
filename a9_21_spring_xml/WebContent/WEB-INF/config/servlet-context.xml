@@ -19,6 +19,24 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	<resources location="/resources/" mapping="/**"></resources>
+
+	<!-- properties파일의 내용을 사용할 수 있도록 Bean를 정의 -->
+	<beans:bean
+		class='org.springframework.beans.factory.config.PropertyPlaceholderConfigurer'>
+		<beans:property name="location">
+			<beans:value>/WEB-INF/properties/db.properties</beans:value>
+		</beans:property>
+	</beans:bean>
+
+	<beans:bean class='org.apache.commons.dbcp2.BasicDataSource'
+		id='basic_data_source'>
+		<beans:property name='driverClassName'
+			value='${db.classname}' />
+		<beans:property name="url" value="${db.url}" />
+		<beans:property name="username" value='${db.username}' />
+		<beans:property name="password" value='${db.password}' />
+	</beans:bean>
+	
 </beans:beans>
 
 
