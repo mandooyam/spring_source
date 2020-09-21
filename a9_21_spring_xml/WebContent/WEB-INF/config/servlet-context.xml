@@ -14,10 +14,12 @@
 	<annotation-driven />
 	<context:component-scan
 		base-package="kr.co.korea.controller" />
-	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+	<beans:bean
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<beans:property name="prefix" value="/WEB-INF/views/" />
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
+	
 	<resources location="/resources/" mapping="/**"></resources>
 
 	<!-- properties파일의 내용을 사용할 수 있도록 Bean를 정의 -->
@@ -36,7 +38,17 @@
 		<beans:property name="username" value='${db.username}' />
 		<beans:property name="password" value='${db.password}' />
 	</beans:bean>
-	
+
+	<beans:bean class='org.mybatis.spring.SqlSessionFactoryBean'
+		id='sqlSession'>
+		<beans:property name="dataSource" ref='basic_data_source' />
+		<beans:property name="mapperLocations" value='/WEB-INF/mapper/*.xml' />
+	</beans:bean>
+	<beans:bean class='org.mybatis.spring.SqlSessionTemplate'
+		id='sqlSessionTemplate'>
+		<beans:constructor-arg index='0' ref='sqlSession' />
+	</beans:bean>
+
 </beans:beans>
 
 
