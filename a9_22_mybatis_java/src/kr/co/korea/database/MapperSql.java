@@ -14,4 +14,7 @@ public interface MapperSql {
 	
 	@Select("select * from memtable") // 컨트롤러에서 select_data() 이름으로 호출되는 메소드
 	List<DataBean> select_data();
+	
+	@Select("select count(*) from memtable")
+	int select_one();
 }

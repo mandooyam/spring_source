@@ -7,8 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>index</h1>
-<a href="write">가입</a><br/>
-<a href="show">목록보기</a><br/>
+<h1>result</h1>
+<h2>저장성공</h2>
 </body>
 </html>
