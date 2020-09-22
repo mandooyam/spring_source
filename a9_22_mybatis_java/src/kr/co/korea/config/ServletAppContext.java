@@ -1,6 +1,9 @@
 package kr.co.korea.config;
 
 import org.apache.commons.dbcp2.BasicDataSource;
+import org.apache.ibatis.session.SqlSessionFactory;
+import org.mybatis.spring.SqlSessionFactoryBean;
+import org.mybatis.spring.mapper.MapperFactoryBean;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -10,6 +13,8 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewResolverRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import kr.co.korea.database.MapperSql;
 
 @Configuration
 @EnableWebMvc
@@ -54,5 +59,25 @@ public class ServletAppContext implements WebMvcConfigurer{
 		// System.out.println("db connect");
 		return source;
 	}
+	
+	//MapperSql 쿼리 등록
+	// 쿼리문과 접속 관리하는 객체
+	@Bean
+	public SqlSessionFactory factory(BasicDataSource source) throws Exception {
+		SqlSessionFactoryBean factoryBean = new SqlSessionFactoryBean();
+		factoryBean.setDataSource(source);
+		SqlSessionFactory factory = factoryBean.getObject();
+		// System.out.println("sql");
+		return factory;
+	}
+
+	// 쿼리문 실행을 위한 객체
+	@Bean
+	public MapperFactoryBean<MapperSql> test_mapper(SqlSessionFactory factory) throws Exception {
+		MapperFactoryBean<MapperSql> factoryBean = new MapperFactoryBean<MapperSql>(MapperSql.class);
+		factoryBean.setSqlSessionFactory(factory);
+		return factoryBean;
+	}
+
 	
 }
