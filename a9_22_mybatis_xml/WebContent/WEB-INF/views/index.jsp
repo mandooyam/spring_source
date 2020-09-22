@@ -8,8 +8,7 @@
 </head>
 <body>
 <h1>index</h1>
-<img src="images/1.png" alt="메이븐" /> 
-링크:<a href="test1">test1</a><br/>
-
+<a href="write">가입</a><br/>
+<a href="show">목록보기</a><br/>
 </body>
 </html>

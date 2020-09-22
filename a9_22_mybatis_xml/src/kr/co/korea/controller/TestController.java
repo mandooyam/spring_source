@@ -2,6 +2,7 @@ package kr.co.korea.controller;
 
 import java.util.List;
 
+import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +15,7 @@ import kr.co.korea.beans.DataBean;
 public class TestController {
 	
 	@Autowired
-//	MapperSql mapper1;
+	SqlSessionTemplate sqltemp;
 	
 	//---가입---------------------------------------------
 	@GetMapping("/write")
@@ -24,16 +25,20 @@ public class TestController {
 	
 	@GetMapping("/result")
 	public String result(DataBean dataBean) {
-//		mapper1.insert_data(dataBean);
+		sqltemp.insert("test_db.insert_data", dataBean);
 		return "result";
 	}
 	//---------------------------------------------------
 	
 	@GetMapping("/show")
 	public ModelAndView show(ModelAndView mv) {
+		List<DataBean> list = sqltemp.selectList("test_db.select_data");
+		mv.addObject("list", list);
 //		List<DataBean> list = mapper1.select_data();
 //		mv.addObject("list", list);
 		
+		int cnt = sqltemp.selectOne("test_db.select_one");
+		mv.addObject("cnt", cnt);
 //		int cnt = mapper1.select_one();
 //		mv.addObject("cnt", cnt);
 		

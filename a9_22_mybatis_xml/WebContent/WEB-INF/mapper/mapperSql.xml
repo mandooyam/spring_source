@@ -19,6 +19,5 @@
 			select count(*) from memtable
 		]]>
 	</select>
-	<update id=""></update>
-	<delete id=""></delete>
+	
 </mapper>
