@@ -20,4 +20,14 @@
 		]]>
 	</select>
 	
+	<update id="update_data" parameterType="kr.co.korea.beans.DataBean">
+		<![CDATA[
+			update memtable set pw=#{pw} where id=#{id}
+		]]>
+	</update>
+	<delete id="delete_data" parameterType="kr.co.korea.beans.DataBean">
+		<![CDATA[
+			delete from memtable where id=#{id} and pw=#{pw}
+		]]>
+	</delete>
 </mapper>
