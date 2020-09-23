@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>result3</h1>
+<h2>삭제 성공</h2>
 </body>
 </html>

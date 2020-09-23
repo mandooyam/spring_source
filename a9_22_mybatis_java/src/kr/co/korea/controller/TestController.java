@@ -68,8 +68,10 @@ public class TestController {
 	}
 	
 	@GetMapping("/result3")
-	public String result3() {
-		return "result3";
+	public String result3(DataBean dataBean) {
+		int res = mapper1.delete_data(dataBean);
+		if(res==1) return "index";
+		else return "forward:/del";
 	}
 	//---------------------------------------------------
 }
