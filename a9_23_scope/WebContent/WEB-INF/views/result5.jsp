@@ -8,5 +8,7 @@
 </head>
 <body>
 <h1>result5</h1>
+bean1.id: ${bean1.id }<br>
+bean1.pw: ${bean1.pw }
 </body>
 </html>

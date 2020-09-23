@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>result3</h1>
+name3: ${name3 }
 </body>
 </html>
