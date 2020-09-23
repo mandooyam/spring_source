@@ -8,5 +8,6 @@
 </head>
 <body>
 <h1>result2</h1>
+<h2>수정 성공</h2>
 </body>
 </html>

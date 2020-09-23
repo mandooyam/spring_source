@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>edit</h1>
+<h1>수정edit</h1>
+<form action="result2" method="get">
+아이디 <input type="text" name="id"><br>
+이름 <input type="text" name="name" disabled="disabled"><br>
+비번 <input type="password" name="pw"><br>
+<button type="submit">확인</button>
+</form>
 </body>
 </html>

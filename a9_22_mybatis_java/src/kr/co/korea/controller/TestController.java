@@ -48,5 +48,28 @@ public class TestController {
 //		return "show";
 //	} 
 	
+	//---과제1(edit)---------------------------------------
+	@GetMapping("/edit")
+	public String edit() {
+		return "edit";
+	}
 	
+	@GetMapping("/result2")
+	public String result2(DataBean dataBean) {
+		int res = mapper1.update_data(dataBean);
+		if(res==1) return "index";
+		else return "forward:/edit";
+	}
+	//---------------------------------------------------
+	//---과제1(del)----------------------------------------
+	@GetMapping("/del")
+	public String del() {
+		return "del";
+	}
+	
+	@GetMapping("/result3")
+	public String result3() {
+		return "result3";
+	}
+	//---------------------------------------------------
 }
