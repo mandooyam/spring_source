@@ -53,5 +53,29 @@ public class TestController {
 //		return "show";
 //	} 
 	
+	//---과제2--------------------------------------------
+	@GetMapping("/edit")
+	public String edit() {
+		return "edit";
+	}
+	
+	@GetMapping("/result2")
+	public String result2(DataBean databean) {
+		int res = sqltemp.update("test_db.update_data", databean);
+		if(res==1) return "index";
+		else return "edit";
+	}
+	
+	@GetMapping("/del")
+	public String del() {
+		return "del";
+	}
+	
+	@GetMapping("/result3")
+	public String result3(DataBean databean) {
+		int res = sqltemp.delete("test_db.delete_data", databean);
+		if(res==1) return "index";
+		else return "del";
+	}
 	
 }
