@@ -89,21 +89,21 @@ public class TestController {
 
 //----------------------------------------------------------
 // (8) RootAppContext.java에 Bean객체로 RequestScope으로 지정할 경우
-	@Autowired
-	DataBean1 bean8;
-	@Resource(name = "testBean2")
-	DataBean2 bean88;
-
-	@GetMapping("/test8")
-	public String test8(Model model) {
-		bean8.setId("chichi");
-		bean8.setPw("12345");
-		bean88.setName("choi");
-		bean88.setJuso("대구");
-		model.addAttribute("bean8", bean8);
-		model.addAttribute("bean88", bean88);
-		return "result";
-	}
+//	@Autowired
+//	DataBean1 bean8;
+//	@Resource(name = "testBean2")
+//	DataBean2 bean88;
+//
+//	@GetMapping("/test8")
+//	public String test8(Model model) {
+//		bean8.setId("chichi");
+//		bean8.setPw("12345");
+//		bean88.setName("choi");
+//		bean88.setJuso("대구");
+//		model.addAttribute("bean8", bean8);
+//		model.addAttribute("bean88", bean88);
+//		return "result";
+//	}
 
 //----------------------------------------------------------
 // (9) 컨트롤러의 클래스 상단에 컴포넌트로 RequestScope로 지정할 경우
