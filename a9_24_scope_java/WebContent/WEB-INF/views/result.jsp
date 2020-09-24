@@ -7,7 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>result</h1> name1: ${name1} <br/>
+<h1>result</h1> 
+name1: ${name1} <br/>
 name2: ${name2} <br/>
 name3: ${name3} <br/>
 <hr/>

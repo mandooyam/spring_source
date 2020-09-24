@@ -4,16 +4,20 @@ import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.context.annotation.RequestScope;
 
 import kr.co.korea.beans.DataBean1;
 import kr.co.korea.beans.DataBean2;
+import kr.co.korea.beans.DataBean3;
+import kr.co.korea.beans.DataBean4;
 
 @Controller
+@RequestScope
 public class TestController {
 // (1) HttpRequest
 	@GetMapping("/test1")
@@ -75,9 +79,9 @@ public class TestController {
 		model.addAttribute("bean6", bean1);
 		return "result";
 	}
-
+//ModelAndView mv 방법도 있음
 //----------------------------------------------------------
-// (7) bean7을 DataBean1 bean1로 주입하여 사용하여 모델객체는 bean6
+// (7) bean7객체로 request됨, bean77객체로 request됨
 	@GetMapping("/test7")
 	public String test7(@ModelAttribute("bean7") DataBean1 bean1, @ModelAttribute("bean77") DataBean2 bean2) {
 		bean1.setId("700");
@@ -89,38 +93,40 @@ public class TestController {
 
 //----------------------------------------------------------
 // (8) RootAppContext.java에 Bean객체로 RequestScope으로 지정할 경우
-//	@Autowired
-//	DataBean1 bean8;
-//	@Resource(name = "testBean2")
-//	DataBean2 bean88;
-//
-//	@GetMapping("/test8")
-//	public String test8(Model model) {
-//		bean8.setId("chichi");
-//		bean8.setPw("12345");
-//		bean88.setName("choi");
-//		bean88.setJuso("대구");
-//		model.addAttribute("bean8", bean8);
-//		model.addAttribute("bean88", bean88);
-//		return "result";
-//	}
+	@Autowired //주입받는 것. 생성x, 미리 만들어둬야 함.
+	DataBean1 bean8;
+	@Resource(name = "testBean2")
+	DataBean2 bean88;
+
+	@GetMapping("/test8")
+	public String test8(Model model) {
+		bean8.setId("chichi");
+		bean8.setPw("12345");
+		bean88.setName("choi");
+		bean88.setJuso("대구");
+		model.addAttribute("bean8", bean8);
+		model.addAttribute("bean88", bean88);
+		return "result";
+	}
 
 //----------------------------------------------------------
 // (9) 컨트롤러의 클래스 상단에 컴포넌트로 RequestScope로 지정할 경우
-//	@Autowired
-//	DataBean3 bean9;
-//	@Resource(name = "testBean4")
-//	DataBean4 bean99;
-//
-//	@GetMapping("/test9")
-//	public String test9(Model model) {
-//		bean9.setEng("100");
-//		bean9.setKor("100");
-//		bean9.setMat("100");
-//		bean99.setNo("100");
-//		bean99.setJumsu("대구");
-//		model.addAttribute("bean9", bean9);
-//		model.addAttribute("bean99", bean99);
-//		return "result";
-//	}
+	// DataBean3과 DataBean4 내부에 @Component, @RequestScope 상단에 적어야함
+	// ServletAppContext에 @ComponentScan("kr.co.korea.beans")추가
+	@Autowired
+	DataBean3 bean9;
+	@Resource(name = "testBean4")
+	DataBean4 bean99;
+
+	@GetMapping("/test9")
+	public String test9(Model model) {
+		bean9.setEng("100");
+		bean9.setKor("100");
+		bean9.setMat("100");
+		bean99.setNo("100");
+		bean99.setJumsu("대구");
+		model.addAttribute("bean9", bean9);
+		model.addAttribute("bean99", bean99);
+		return "result";
+	}
 }

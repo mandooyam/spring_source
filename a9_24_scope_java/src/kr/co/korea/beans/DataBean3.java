@@ -1,5 +1,10 @@
 package kr.co.korea.beans;
 
+import org.springframework.stereotype.Component;
+import org.springframework.web.context.annotation.RequestScope;
+
+@Component
+@RequestScope
 public class DataBean3 {
 
 	private String kor;
