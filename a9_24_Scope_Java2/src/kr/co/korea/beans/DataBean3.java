@@ -2,9 +2,11 @@ package kr.co.korea.beans;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.annotation.RequestScope;
+import org.springframework.web.context.annotation.SessionScope;
 
 @Component
-@RequestScope
+//@RequestScope
+@SessionScope
 public class DataBean3 {
 	 private String kor;
 	 private String eng;

@@ -17,7 +17,7 @@ import kr.co.korea.beans.DataBean2;
 import kr.co.korea.beans.DataBean3;
 import kr.co.korea.beans.DataBean4;
 
-@Controller
+//@Controller
 //@SessionAttributes("bean6")
 @SessionAttributes({"bean6", "bean7", "bean77"})
 public class TestController4 {
