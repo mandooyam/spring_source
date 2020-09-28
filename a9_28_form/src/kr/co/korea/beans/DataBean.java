@@ -19,6 +19,15 @@ public class DataBean {
 	private String gender3;
 	private String gender4;
 	
+	private String level;
+	
+	public String getLevel() {
+		return level;
+	}
+	public void setLevel(String level) {
+		this.level = level;
+	}
+	
 	public String getUid() {
 		return uid;
 	}

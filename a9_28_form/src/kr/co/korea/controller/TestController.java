@@ -22,11 +22,11 @@ public class TestController {
 		bean.setJob1("학생");
 		bean.setJob2("시스템관리직");
 		bean.setJob3("dba");
-
 		// setHobby1 ~setHobby3 아래쪽에서
 		bean.setGender1("male");
 		bean.setGender2("male");
 		bean.setGender3("male");
+		bean.setLevel("대졸");
 
 		// job_list1
 		String[] job_list1 = { "기술자", "교사", "학생" };
@@ -87,6 +87,11 @@ public class TestController {
 
 		// test1.jsp의 gender1~gender3까지
 		// radiobutton태그에 남자와 여자로 실습할것
+		
+		// level_list1
+		String[] level_list1 = {"고졸","중졸","대졸"};
+		model.addAttribute("level_list1", level_list1);
+		
 		return "test1";
 	}
 }

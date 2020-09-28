@@ -51,6 +51,13 @@
 	<hr/>
 	gender3: <form:radiobuttons path="job3" items="${job_list3 }" itemLabel="key"
 	itemValue="value"/><br/>
+	
+	<hr/>
+	최종학력: <form:radiobutton path="level" value="고졸" />고졸
+		<form:radiobutton path="level" value="중졸" />중졸
+		<form:radiobutton path="level" value="대졸" />대졸<br/>
+	<hr/>
+	최종학력2: <form:radiobuttons path="level" items="${level_list1 }" /><br/>
 	<form:button disabled="true">확인</form:button>
 </form:form>
 </body>
