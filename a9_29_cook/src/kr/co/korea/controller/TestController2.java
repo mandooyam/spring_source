@@ -11,7 +11,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
+//@Controller
 //(1)Properties파일을 @PropertySources을 이용하여 주입받기(jsp에서는 사용안됨)
 @PropertySources(@PropertySource("/WEB-INF/properties/db.properties"))
 public class TestController2 {
