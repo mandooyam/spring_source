@@ -7,9 +7,11 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>index</h1>
-<img src="images/1.png" alt="메이븐" /> 
-링크:<a href="test1">test1</a><br/>
-
+<a href='user/modify'>user/modify</a><br/>
+<a href='user/logout'>user/logout</a><br/>
+<a href='board/write'>board/write</a><br/>
+<a href='board/main'>board/main</a><br/>
+<a href='board/modify'>board/modify</a><br/>
+<a href='board/delete'>board/delete</a><br/>
 </body>
 </html>
