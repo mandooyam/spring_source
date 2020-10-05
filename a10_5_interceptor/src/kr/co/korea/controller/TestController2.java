@@ -30,9 +30,9 @@ public class TestController2 {
 		return "error1";
 	}
 
-	@ExceptionHandler(NullPointerException.class) /* Exception.class */
-	public String exception2() {
-		return "error2";
-	}
+//	@ExceptionHandler(NullPointerException.class) /* Exception.class */
+//	public String exception2() {
+//		return "error2";
+//	}
 
 }

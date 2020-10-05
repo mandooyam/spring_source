@@ -15,6 +15,7 @@ import kr.co.korea.interceptor.TestWriterInterceptor;
 @Configuration
 @EnableWebMvc
 @ComponentScan("kr.co.korea.controller")
+@ComponentScan("kr.co.korea.exception")
 public class ServletAppContext implements WebMvcConfigurer{
 
 	@Override
