@@ -3,7 +3,7 @@ package kr.co.korea.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
+//@Controller
 public class TestController {
 
 	@GetMapping("/user/modify")
