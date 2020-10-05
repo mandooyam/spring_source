@@ -20,5 +20,9 @@
 <hr/>
 <a href='test1'>test1 배열크기 에러 </a><br/>
 <a href='test2'>test2 널값 에러</a><br/>
+<hr>
+<h3>restController 테스트</h3>
+<a href='test3'>test3파일로 이동하는 것이 아님</a><br/>
+<a href='test4'>test4파일로 이동하는 것이 아님</a>
 </body>
 </html>
