@@ -7,7 +7,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 
-@Controller
+//@Controller
 public class TestController2 {
 	// (1) ArrayIndexOutOfBoundsException 에러있음
 	@GetMapping("/test1")
