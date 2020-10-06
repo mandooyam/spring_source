@@ -13,13 +13,6 @@ create table board_info_table(
 	board_info_name varchar2(500) not null
 );
 
-insert into board_info_table(board_info_idx, board_info_name) values (1, '1자유게시판');
-insert into board_info_table(board_info_idx, board_info_name) values (2, '2게시판');
-insert into board_info_table(board_info_idx, board_info_name) values (3, '3게시판');
-insert into board_info_table(board_info_idx, board_info_name) values (4, '4게시판');
-
-commit;
-
 create table user_table(
 	user_idx number constraint USER_PK primary key,
 	user_name varchar2(50) not null,
@@ -38,6 +31,13 @@ create table content_table(
 	                  constraint CONTENT_FK2 references board_info_table(board_info_idx),
 	content_date date not null
 );
+
+insert into board_info_table(board_info_idx, board_info_name) values (1, '1자유게시판');
+insert into board_info_table(board_info_idx, board_info_name) values (2, '2게시판');
+insert into board_info_table(board_info_idx, board_info_name) values (3, '3게시판');
+insert into board_info_table(board_info_idx, board_info_name) values (4, '4게시판');
+
+commit;
 
 desc board_info_table;
 desc user_table;
