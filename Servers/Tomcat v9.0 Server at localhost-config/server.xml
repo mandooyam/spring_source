@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="a10_5_interceptor" path="/a10_5_interceptor" reloadable="true" source="org.eclipse.jst.jee.server:a10_5_interceptor"/><Context docBase="webProjectJava" path="/webProjectJava" reloadable="true" source="org.eclipse.jst.jee.server:webProjectJava"/><Context docBase="XMLwebProject" path="/XMLwebProject" reloadable="true" source="org.eclipse.jst.jee.server:XMLwebProject"/></Host>
+      <Context docBase="a10_5_interceptor" path="/a10_5_interceptor" reloadable="true" source="org.eclipse.jst.jee.server:a10_5_interceptor"/><Context docBase="webProjectJava" path="/webProjectJava" reloadable="true" source="org.eclipse.jst.jee.server:webProjectJava"/><Context docBase="XMLwebProject" path="/XMLwebProject" reloadable="true" source="org.eclipse.jst.jee.server:XMLwebProject"/><Context docBase="webProjectJava10_6" path="/webProjectJava10_6" reloadable="true" source="org.eclipse.jst.jee.server:webProjectJava10_6"/><Context docBase="webProjectJava10_7" path="/webProjectJava10_7" reloadable="true" source="org.eclipse.jst.jee.server:webProjectJava10_7"/></Host>
     </Engine>
   </Service>
 </Server>
