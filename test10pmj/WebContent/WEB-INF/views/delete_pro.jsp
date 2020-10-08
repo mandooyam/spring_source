@@ -7,9 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>index</h1>
-링크:<a href="insert">insert</a><br/>
-링크:<a href="delete">delete</a><br/>
-
+삭제성공<br/>
+링크:<a href="index">index</a><br/>
 </body>
 </html>
